@@ -28,8 +28,8 @@ function handleButtonClick(e) {
     e.target.style.backgroundColor = colors[activePlayer];
 
     if(checkWinner()) {
-        resetGame(`${turn[activePlayer]} won the game`);
         scores[activePlayer] += 1;
+        resetGame(`${turn[activePlayer]} won the game`);
     }
     else if(checkDrawn()) {
         resetGame("It's a drawn");
